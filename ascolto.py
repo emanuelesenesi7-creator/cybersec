@@ -23,3 +23,6 @@ for i in range(6):
     if richiesta == 'SHUTDOWN':
       break
   finally:
+    conn.close()
+  f.close()
+  server_socket.close()
