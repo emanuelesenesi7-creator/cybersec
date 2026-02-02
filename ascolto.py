@@ -6,6 +6,7 @@ server_socket.bind((host, port))
 server_socket.listen(1)
 f = open('logfile.txt', 'w')
 f.write(f"Server listening on {host}:{port}\n")
+richiesta = 'SHUTDOWN'
 for i in range(6):
   conn, addr = server_socket.accept()
   f.write(f"Connected by {addr}\n"}
@@ -24,5 +25,5 @@ for i in range(6):
       break
   finally:
     conn.close()
-  f.close()
-  server_socket.close()
+f.close()
+server_socket.close()
